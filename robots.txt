@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://quadrovideo.com.br/sitemap.xml
+Sitemap: https://quadrovideos.com.br/sitemap.xml
