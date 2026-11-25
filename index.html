@@ -396,6 +396,41 @@ footer .base{margin-top:36px;padding-top:20px;border-top:1px solid #262a33;displ
 .passos li:before{counter-increment:ps;content:counter(ps);flex:none;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--azul);display:grid;place-items:center;font:800 14px var(--display)}
 .passos b{color:#fff}
 @media(min-width:900px){.cta-band .wrap.zw{grid-template-columns:1.1fr .9fr!important;align-items:center}}
+
+/* v12 · tabela no celular = lista */
+@media(max-width:680px){
+  .cmp .row.hd{display:none}
+  .cmp .row{grid-template-columns:1fr;gap:8px;padding:16px 18px}
+  .cmp .row > div{padding:0!important;border:0!important;background:none!important}
+  .cmp .row .lb{font-size:12px;color:var(--cinza)}
+  .cmp .row .b{order:1;background:var(--azul-cl)!important;border-radius:12px;padding:10px 12px!important;font-size:16px}
+  .cmp .row .a{order:2;font-size:14px;padding:0 12px!important}
+  .cmp .row .a > span:not(.big):before,.cmp .row .a .big:before{content:"Sozinho ou agência comum: ";font:500 13px var(--body);color:var(--cinza);letter-spacing:0}
+  .cmp .row .a .big{font-size:14px!important;font-family:var(--body)!important;font-weight:500!important}
+  .cmp .row .b .big{font-size:18px!important}
+}
+/* v12 · Reel proporcional + interface do Instagram */
+.phx,.ph{container-type:inline-size}
+.rz{font-size:6.3cqw!important}
+.rz > .ft{display:none}
+.rz .cn{padding:10% 17% 42% 9%!important}
+.rz .lg{bottom:31%!important;left:9%!important;right:17%!important}
+.rz .tag{top:7.5%!important}
+.rz .acoes{position:absolute;right:3.5%;bottom:13%;display:grid;gap:.95em;justify-items:center;z-index:3;color:#fff;font:600 .5em var(--body);transition:color .3s}
+.rz .acoes div{display:grid;justify-items:center;gap:.15em}
+.rz .acoes svg{width:2.1em;height:2.1em;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+.rz .acoes .lk.on svg{color:#ff3040;fill:#ff3040;animation:pop .4s}
+@keyframes pop{50%{transform:scale(1.25)}}
+.rz .info{position:absolute;left:5%;right:20%;bottom:4.5%;z-index:3;color:#fff;font:500 .5em/1.35 var(--body);display:grid;gap:.45em;transition:color .3s}
+.rz .info .u{display:flex;align-items:center;gap:.5em;font-weight:700}
+.rz .info .u i{width:1.9em;height:1.9em;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}
+.rz .info .u i:after{content:"";width:.7em;height:.7em;border-radius:50%;background:var(--rec)}
+.rz .info .u em{font-style:normal;border:1px solid currentColor;border-radius:.5em;padding:.05em .6em;font-weight:600}
+.rz .info .tx{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rz .info .au{display:flex;gap:.4em;align-items:center;opacity:.9}
+.rz.claro .acoes,.rz.claro .info{color:#111318}
+.rz.claro .info .u i{background:#111318}
+.rz .bars{top:2.5%!important}
 </style>
 </head>
 <body>
@@ -540,7 +575,7 @@ footer .base{margin-top:36px;padding-top:20px;border-top:1px solid #262a33;displ
   <div class="card cmp" role="table" aria-label="Comparação entre fazer sozinho ou com agência comum e com a Quadro">
     <div class="row hd" role="row"><div class="lb" role="columnheader"></div><div class="a" role="columnheader">Sozinho ou agência comum</div><div class="b" role="columnheader">Com a Quadro</div></div>
     <div class="row" role="row"><div class="lb" role="rowheader">Posts por mês</div><div class="a" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span class="big">2 a 4</span></div><div class="b" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="big">28 ou mais</span></div></div>
-    <div class="row" role="row"><div class="lb" role="rowheader">Quem grava</div><div class="a" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Você, entre uma consulta e outra</span></div><div class="b" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Ninguém: criamos do zero</span></div></div>
+    <div class="row" role="row"><div class="lb" role="rowheader">Quem grava</div><div class="a" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Você, entre uma consulta e outra</span></div><div class="b" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Você escolhe: criamos do zero ou editamos o seu</span></div></div>
     <div class="row" role="row"><div class="lb" role="rowheader">Regras do conselho</div><div class="a" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Ninguém revisa</span></div><div class="b" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Revisado com CFM, CFO e OAB</span></div></div>
     <div class="row" role="row"><div class="lb" role="rowheader">Site e Google</div><div class="a" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Desatualizado ou inexistente</span></div><div class="b" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Site que agenda e Google arrumado</span></div></div>
     <div class="row" role="row"><div class="lb" role="rowheader">Quem entende do seu nicho</div><div class="a" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Agência que atende de tudo</span></div><div class="b" role="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Só especialistas</span></div></div>
@@ -703,9 +738,19 @@ footer .base{margin-top:36px;padding-top:20px;border-top:1px solid #262a33;displ
         d.innerHTML=(c.k?'<div class="k">'+c.k+'</div>':'')+'<div class="ic">'+c.ic+'</div><h4>'+ws(c.h)+'</h4><div class="lg">'+ws(c.lg)+'</div>';
         r.insertBefore(d,ft); return d; });
       var tag=document.createElement('div'); tag.className='tag'; tag.innerHTML='<i></i>Feito do zero, sem gravar'; r.insertBefore(tag,ft);
+      var ac=document.createElement('div'); ac.className='acoes'; ac.setAttribute('aria-hidden','true');
+      ac.innerHTML='<div class="lk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg><span>2.184</span></div>'
+        +'<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>96</span></div>'
+        +'<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg><span>341</span></div>'
+        +'<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"/></svg><span>812</span></div>';
+      r.insertBefore(ac,ft);
+      var inf=document.createElement('div'); inf.className='info'; inf.setAttribute('aria-hidden','true');
+      inf.innerHTML='<div class="u"><i></i>dra.suaclinica<em>Seguir</em></div><div class="tx">3 erros com o protetor solar que quase todo mundo comete… mais</div><div class="au">♪ Áudio original · narração</div>';
+      r.insertBefore(inf,ft);
+      var lk=ac.querySelector('.lk');
       var bar=r.querySelector('.bars .run'), i=0, T=2800, t0=0, timers=[];
       function show(n){ timers.forEach(clearTimeout); timers=[]; cenas.forEach(function(c,j){c.classList.toggle('on',j===n);});
-        tag.style.color = ft.style.color = cenas[n].classList.contains('cl') ? '#111318' : '#fff';
+        var cl=cenas[n].classList.contains('cl'); tag.style.color = cl ? '#111318' : '#fff'; r.classList.toggle('claro', cl); lk.classList.toggle('on', n===4);
         cenas[n].querySelectorAll('h4 w').forEach(function(w,j){w.style.transitionDelay=(j*90)+'ms';});
         var lw=cenas[n].querySelectorAll('.lg w'); lw.forEach(function(w){w.classList.remove('v');});
         lw.forEach(function(w,j){timers.push(setTimeout(function(){w.classList.add('v');},500+j*170));}); }
